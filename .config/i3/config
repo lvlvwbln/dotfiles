@@ -146,7 +146,8 @@ bindsym F11 exec pamixer --allow-boost -d 5
 bindsym F12 exec pamixer --allow-boost -i 5
 bindsym Print exec --no-startup-id scrot
 bindsym Shift+Print exec --no-startup-id scrot -u
-bindsym --release $mod+Print exec scrot -s
+bindsym --release Shift+Print exec scrot -s ~/concurso/redes/questoes/redes-storage::%H:%M:%S.png -e 'pinta $f'
+bindsym --release $mod+Print exec scrot -s ~/concurso/redes/questoes/redes-storage::%H:%M:%S.png
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
