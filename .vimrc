@@ -1,3 +1,13 @@
+" minpac stuff
+packadd minpac
+call minpac#init()
+call minpac#add('tpope/vim-unimpaired')
+call minpac#add('w0rp/ale')
+call minpac#add('tpope/vim-scriptease', {'type': 'opt'})
+
+command! PackUpdate call minpac#update()
+command! PackClean call minpac#clean()
+
 " setting leader key
 let mapleader = ","
 
@@ -24,11 +34,11 @@ autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c
 " Automatically deletes all trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
-" Put these lines at the very end of your vimrc file.
+" OLD STUFF if you will to load plugins without minpac
 
 " Load all plugins now.
 " Plugins need to be added to runtimepath before helptags can be generated.
-packloadall
+"packloadall
 " Load all of the helptags now, after plugins have been loaded.
 " All messages and errors will be ignored.
-silent! helptags ALL
+"silent! helptags ALL
